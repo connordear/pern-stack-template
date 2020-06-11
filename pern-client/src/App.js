@@ -1,8 +1,16 @@
 import React, { Fragment } from "react";
 import "./App.css";
+import InputTodo from "./components/InputTodo";
+import ListTodos from "./components/ListTodos";
+import "./components/master.css";
 
 function App() {
-  return <Fragment></Fragment>;
+    return (
+        <Fragment>
+            <InputTodo />
+            <ListTodos />
+        </Fragment>
+    );
 }
 
 export default App;
