@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from "react";
 
-const InputTodo = () => {
+const InputTodo = props => {
     const [description, setDescription] = useState("");
 
     const onSubmitForm = async e => {
@@ -12,7 +12,7 @@ const InputTodo = () => {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body),
             });
-            window.location = "/"; // Do we need this? is there a better way?
+            props.getTodos(); // Refresh todos
         } catch (error) {
             console.error(error.message);
         }
